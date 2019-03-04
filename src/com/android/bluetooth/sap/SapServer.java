@@ -50,8 +50,8 @@ import com.google.protobuf.micro.CodedOutputStreamMicro;
 public class SapServer extends Thread implements Callback {
     private static final String TAG = "SapServer";
     private static final String TAG_HANDLER = "SapServerHandler";
-    public static final boolean DEBUG = Log.isLoggable(SapService.LOG_TAG, Log.DEBUG);
-    public static final boolean VERBOSE = Log.isLoggable(SapService.LOG_TAG, Log.VERBOSE);
+    public static final boolean DEBUG = false;   //Log.isLoggable(SapService.LOG_TAG, Log.DEBUG);
+    public static final boolean VERBOSE = false; //Log.isLoggable(SapService.LOG_TAG, Log.VERBOSE);
 
     private enum SAP_STATE    {
         DISCONNECTED, CONNECTING, CONNECTING_CALL_ONGOING, CONNECTED,

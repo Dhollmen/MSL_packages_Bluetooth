@@ -72,7 +72,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 final class A2dpSinkStateMachine extends StateMachine {
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
 
     static final int CONNECT = 1;
     static final int DISCONNECT = 2;

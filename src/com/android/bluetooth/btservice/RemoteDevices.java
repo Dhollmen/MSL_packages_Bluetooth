@@ -35,7 +35,7 @@ import java.util.HashSet;
 
 
 final class RemoteDevices {
-    private static final boolean DBG = true;
+    private static final boolean DBG = false;
     private static final String TAG = "BluetoothRemoteDevices";
 
 

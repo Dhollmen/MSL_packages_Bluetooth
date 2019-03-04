@@ -79,9 +79,9 @@ public class BluetoothPbapService extends Service {
      * DEBUG log: "setprop log.tag.BluetoothPbapService VERBOSE"
      */
 
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
-    public static boolean VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+    public static boolean VERBOSE = false;
 
     /**
      * Intent indicating incoming obex authentication request which is from
@@ -360,7 +360,7 @@ public class BluetoothPbapService extends Service {
 
     private void startRfcommSocketListener() {
         if(!VERBOSE)
-            VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+            VERBOSE = false;   //Log.isLoggable(LOG_TAG, Log.VERBOSE);
         if (VERBOSE) Log.v(TAG, "Pbap Service startRfcommSocketListener");
 
         if (mAcceptThread == null) {

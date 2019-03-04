@@ -66,8 +66,9 @@ public class BluetoothMapService extends ProfileService {
      * DEBUG log: "setprop log.tag.BluetoothMapService VERBOSE"
      */
 
-    public static final boolean DEBUG = true; //FIXME set to false;
-    public static boolean VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+    public static final boolean DEBUG = false; //FIXED
+    public static boolean VERBOSE = false;     //Log.isLoggable(LOG_TAG, Log.VERBOSE);
+
 
     /**
      * Intent indicating timeout for user confirmation, which is sent to
@@ -589,7 +590,7 @@ public class BluetoothMapService extends ProfileService {
     protected boolean start() {
         if (DEBUG) Log.d(TAG, "start()");
         if(!VERBOSE)
-        VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+        VERBOSE = false; //Log.isLoggable(LOG_TAG, Log.VERBOSE);
 
         if (!Utils.checkCaller()) {
             Log.w(TAG, "start received for non-active user, ignoring");
@@ -597,7 +598,7 @@ public class BluetoothMapService extends ProfileService {
         }
         //Start MapProfile if not already done.
         if (isMapStarted()) {
-            Log.w(TAG, "start received for already started, ignoring");
+            //Log.w(TAG, "start received for already started, ignoring");
             return false;
         }
 
@@ -734,7 +735,7 @@ public class BluetoothMapService extends ProfileService {
                 for(BluetoothMapAccountItem account : mEnabledAccounts) {
                     Log.v(TAG, "   " + account);
                 }
-                Log.v(TAG,"  Active MAS instances:");
+                //Log.v(TAG,"  Active MAS instances:");
                 for(int i=0, c=mMasInstances.size(); i < c; i++) {
                     BluetoothMapMasInstance masInst = mMasInstances.valueAt(i);
                     Log.v(TAG, "   " + masInst);

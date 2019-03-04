@@ -50,8 +50,8 @@ public class SapService extends ProfileService {
     private static final int SDP_SAP_VERSION = 0x0102;
     private static final String TAG = "SapService";
     public static final String LOG_TAG = "BluetoothSap";
-    public static boolean DEBUG = Log.isLoggable(LOG_TAG, Log.DEBUG);
-    public static boolean VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+    public static boolean DEBUG = false;   //Log.isLoggable(LOG_TAG, Log.DEBUG);
+    public static boolean VERBOSE = false; //Log.isLoggable(LOG_TAG, Log.VERBOSE);
 
     /* Message ID's */
     private static final int START_LISTENER = 1;
@@ -615,9 +615,9 @@ public class SapService extends ProfileService {
     @Override
     protected boolean start() {
         if(!DEBUG)
-            DEBUG = Log.isLoggable(LOG_TAG, Log.DEBUG);
+            DEBUG = false;   //Log.isLoggable(LOG_TAG, Log.DEBUG);
         if(!VERBOSE)
-            VERBOSE = Log.isLoggable(LOG_TAG, Log.VERBOSE);
+            VERBOSE = false; //Log.isLoggable(LOG_TAG, Log.VERBOSE);
         if (VERBOSE) Log.v(TAG, "start SAPService");
         IntentFilter filter = new IntentFilter();
         filter.addAction(BluetoothDevice.ACTION_CONNECTION_ACCESS_REPLY);

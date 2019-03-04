@@ -37,8 +37,8 @@ import com.android.internal.util.StateMachine;
  */
 
 final class AdapterState extends StateMachine {
-    private static final boolean DBG = true;
-    private static final boolean VDBG = true;
+    private static final boolean DBG = false;
+    private static final boolean VDBG = false;
     private static final String TAG = "BluetoothAdapterState";
 
     static final int BLE_TURN_ON = 0;

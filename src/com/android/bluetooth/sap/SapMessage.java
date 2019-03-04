@@ -26,8 +26,8 @@ import android.util.Log;
 public class SapMessage {
 
     public static final String TAG = "SapMessage";
-    public static final boolean DEBUG = Log.isLoggable(SapService.LOG_TAG, Log.DEBUG);
-    public static final boolean VERBOSE = Log.isLoggable(SapService.LOG_TAG, Log.VERBOSE);
+    public static final boolean DEBUG = false;   //Log.isLoggable(SapService.LOG_TAG, Log.DEBUG);
+    public static final boolean VERBOSE = false; //Log.isLoggable(SapService.LOG_TAG, Log.VERBOSE);
     public static final boolean TEST = false;
 
     /* Message IDs - SAP specification */
